@@ -23,6 +23,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:clickable="true"
+            android:animateLayoutChanges="true"
             android:background="@drawable/bg_tabs"
             android:orientation="horizontal">
 
@@ -34,6 +35,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:clickable="true"
+            android:animateLayoutChanges="true"
             android:background="@drawable/bg_tabs"
             android:orientation="horizontal">
 
@@ -45,6 +47,7 @@
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:clickable="true"
+            android:animateLayoutChanges="true"
             android:background="@drawable/bg_tabs"
             android:orientation="horizontal">
 

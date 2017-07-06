@@ -11,7 +11,8 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-LinearLayout view1,view2,view3;
+    LinearLayout view1, view2, view3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,32 +23,38 @@ LinearLayout view1,view2,view3;
         view1 = (LinearLayout) findViewById(R.id.view1);
         view2 = (LinearLayout) findViewById(R.id.view2);
         view3 = (LinearLayout) findViewById(R.id.view3);
-        view2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                view1.setSelected(false);
-                view3.setSelected(false);
-                view2.setSelected(true);
-            }
-        });
+        view1.setSelected(true);
 
         view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                setSelectedFalse();
                 view1.setSelected(true);
-                view3.setSelected(false);
-                view2.setSelected(false);
             }
         });
+        view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setSelectedFalse();
+                view2.setSelected(true);
+            }
+        });
+
+
         view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                view1.setSelected(false);
-                view2.setSelected(false);
+                setSelectedFalse();
                 view3.setSelected(true);
             }
         });
 
+    }
+
+    private void setSelectedFalse() {
+        view1.setSelected(false);
+        view2.setSelected(false);
+        view3.setSelected(false);
     }
 
 }
